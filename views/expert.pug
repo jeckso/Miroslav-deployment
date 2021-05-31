@@ -1,0 +1,85 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel="stylesheet" type="text/css" href="/stylesheets/util.css")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+    body
+        nav(class="navbar navbar-light bg-light")
+            a(class="navbar-brand" href="#") Navbar
+
+        div(class="expert-container")
+            h2 Create properties
+            div(class="property-container")
+                div(class="props")
+                    span Quantity properties
+                    div(class="props-input-container")
+                        input(type="text"  class="form-control" id="quanNameInput"  aria-describedby="emailHelp"  placeholder="Enter props name")
+                        input(type="text"  class="form-control" id="quanSignInput"  aria-describedby="emailHelp"  placeholder="Enter props sign")
+                        select(id="unit-select")
+                            each un in units
+                                option(value=un.id)= un.name
+                        button(type="button" class="btn btn-outline-dark add-class" id="quanAdd") add
+                    ul(class="list-group")
+                        each val in quantity
+                            li(class="list-group-item")
+                                span= val.name
+                                span= val.sign
+                div(class="props")
+                    span Quality properties
+                    div(class="props-input-container")
+                        input(type="text"  class="form-control" id="qualNameInput"  aria-describedby="emailHelp"  placeholder="Enter props name")
+                        input(type="text"  class="form-control" id="qualSignInput"  aria-describedby="emailHelp"  placeholder="Enter props sign")
+                        button(type="button" class="btn btn-outline-dark add-class" id="qualAdd") add
+                    ul(class="list-group")
+                        each val in quality
+                            li(class="list-group-item")
+                                span= val.name
+                                span= val.sign
+            h2 Create alphabet
+            div(class="alph-container") 
+                div(class="props-input-container") 
+                    input(type="text"  class="form-control" id="alphInput"  aria-describedby="emailHelp"  placeholder="Enter alphabet name")
+                    button(type="button" class="btn btn-outline-dark add-class" id="alphAdd") add
+                ul(class="list-group" id="alphabets") List of alphabets
+                    each val in alphabets
+                        li(class="list-group-item" data-id=val.id)
+                            span= val.name 
+                            button(type="button" class="btn btn-outline-dark add-class") alphabet details
+            
+            div(class="properties hidden" id="properties-list")
+                h3 Add props to alphabet
+                ul(class="list-group")
+                    h4 Quantity props
+                    each val in quantity
+                        li(class="list-group-item" data-id=val.id)
+                            span= val.name
+                            span= val.sign
+                            input(type="number" name="min-value-input" placeholder="min-value")
+                            input(type="number" name="max-value-input" placeholder="max-value")
+                            button(type="button" class="btn btn-outline-dark add-prop-quantity") add to alphabet classes
+                ul(class="list-group")
+                    h4 Quality props
+                    each val in quality
+                        li(class="list-group-item" data-id=val.id)
+                            span= val.name
+                            span= val.sign
+                            button(type="button" class="btn btn-outline-dark add-prop-quality") add to alphabet classes
+
+            div(class="classes-container hidden" id="class-cont")
+                div(class="props-input-container") 
+                    input(type="text" id="classInput" class="form-control"  aria-describedby="emailHelp"  placeholder="Enter class name")
+                    button(type="button" class="btn btn-outline-dark add-class" id="classAdd") add
+                ul(class="list-group" id="classes")
+
+
+                ul(class="list-group" id="class-props")
+                div(class="list-group" id="button-handler")
+           
+
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+    script(src="/javascripts/expert.js")
+                        

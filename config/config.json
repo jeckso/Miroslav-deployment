@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "sawodjiwiigllh",
+    "password": "5bef33c09d3ecb0bee26a7badb703da2a8ca7a49fad847a729d379d2c326fa61",
+    "database": "deg7fs21js4sl",
+    "host": "ec2-176-34-105-15.eu-west-1.compute.amazonaws.com",
+    "dialect": "postgres",
+    "ssl": true,
+    "native": true
+  },
+  "test": {
+    "username": "sawodjiwiigllh",
+    "password": "5bef33c09d3ecb0bee26a7badb703da2a8ca7a49fad847a729d379d2c326fa61",
+    "database": "deg7fs21js4sl",
+    "host": "ec2-176-34-105-15.eu-west-1.compute.amazonaws.com",
+    "dialect": "postgres",
+    "ssl": true,
+    "native": true
+  },
+  "production": {
+    "username": "sawodjiwiigllh",
+    "password": "5bef33c09d3ecb0bee26a7badb703da2a8ca7a49fad847a729d379d2c326fa61",
+    "database": "deg7fs21js4sl",
+    "host": "ec2-176-34-105-15.eu-west-1.compute.amazonaws.com",
+    "dialect": "postgres",
+    "ssl": true,
+    "native": true
+  }
+}
