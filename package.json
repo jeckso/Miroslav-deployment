@@ -21,7 +21,9 @@
     "pug": "2.0.0-beta11",
     "sequelize": "6.6.2",
     "sequelize-cli": "6.2.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "webpack-cli": "4.7.0",
+    "webpack-command": "0.5.1"
   },
   "devDependencies": {
     "webpack": "^4.30.0",
